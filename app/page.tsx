@@ -11,7 +11,7 @@ const faqs = [
   ],
   [
     "How do I sign up?",
-    "Start with the interest email below. We’ll share confirmed registration details, eligibility, dates, fees, and equipment information as they become available. Sending an inquiry does not reserve a roster spot or complete registration.",
+    "We are taking inquiries for the 2027 season. Start with the interest signup form below. We’ll share confirmed registration details, eligibility, dates, fees, and equipment information as they become available. Sending an inquiry does not reserve a roster spot or complete registration.",
   ],
   [
     "Where is the Bengals’ home field?",
@@ -27,7 +27,7 @@ const faqs = [
   ],
   [
     "Can I coach, volunteer, or help as a school representative?",
-    "We’d love to hear from you. We’re building a community around players, families, coaches, and local high school representatives. Select coaching or volunteering in the interest form, or email us directly.",
+    "We’d love to hear from you. We’re building a community around players, families, coaches, and local high school representatives. Select coaching or volunteering in the interest signup form, or email us directly.",
   ],
 ];
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="hero-shade" />
         <div className="container hero-content">
           <p className="eyebrow">
-            <span className="mini-rule" /> Santa Barbara youth tackle football
+            <span className="mini-rule" /> 2027 season inquiries are open
           </p>
           <h1 id="hero-title">
             BIG DREAMS.
@@ -342,7 +342,7 @@ export default function Home() {
                 Get player updates <Arrow />
               </span>
             </a>
-            <a href="mailto:info@sbbengals.com?subject=Bengals%20volunteer%20interest">
+            <a href="#join">
               <span className="eyebrow">For coaches &amp; volunteers</span>
               <h3>Be the difference.</h3>
               <p>
@@ -353,7 +353,7 @@ export default function Home() {
                 Raise your hand <Arrow />
               </span>
             </a>
-            <a href="mailto:info@sbbengals.com?subject=Bengals%20sponsorship%20interest">
+            <Link href="/sponsors/">
               <span className="eyebrow">For local businesses</span>
               <h3>Back the Bengals.</h3>
               <p>
@@ -363,7 +363,7 @@ export default function Home() {
               <span className="involve-link">
                 Explore sponsorship <Arrow />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -418,16 +418,16 @@ export default function Home() {
               IS <span>SHOWING UP.</span>
             </h2>
             <p>
-              First season or next chapter, we’d love to hear from your family.
-              Tell us a little about your interest and we’ll help you find your
-              next step.
+              We are taking inquiries for the 2027 season. Tell us a little
+              about your family, or your interest in coaching or volunteering.
+              Your submitted inquiry is saved so we can follow up.
             </p>
             <div className="join-points">
               <p>
                 <span>01</span>Tell us how you’d like to get involved.
               </p>
               <p>
-                <span>02</span>Send your interest email to the Bengals.
+                <span>02</span>Submit your inquiry to the Bengals.
               </p>
               <p>
                 <span>03</span>Get program information and next steps.

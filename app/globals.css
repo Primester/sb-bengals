@@ -2206,3 +2206,114 @@ details[open] .faq-plus:after {
   cursor: wait;
   opacity: 0.65;
 }
+
+/* Sponsor tiers and the saved 2027 inquiry form. */
+.sponsor-intro {
+  max-width: 700px;
+  line-height: 1.8;
+  margin-top: 24px;
+  color: #4a5467;
+}
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 42px;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #d8deea;
+  border-top: 5px solid var(--blue, #174cff);
+  border-radius: 8px;
+}
+.sponsor-card h3 {
+  font-size: 56px;
+  margin: 16px 0;
+}
+.sponsor-card > p:not(.eyebrow) {
+  color: #4a5467;
+  line-height: 1.7;
+}
+.sponsor-card ul {
+  padding-left: 20px;
+  margin: 24px 0 30px;
+  line-height: 1.7;
+  flex: 1;
+}
+.sponsor-card li {
+  margin-bottom: 12px;
+}
+.sponsor-gold {
+  background: #101b36;
+  color: white;
+  border-color: #174cff;
+}
+.sponsor-gold > p:not(.eyebrow) {
+  color: #d2dbee;
+}
+.sponsor-note {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 28px;
+  color: #4a5467;
+}
+.sponsor-note a {
+  text-decoration: underline;
+}
+.sponsor-nonprofit {
+  border-top: 1px solid #d8deea;
+}
+.signup-panel {
+  min-width: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  color: #161e30;
+}
+.signup-panel > p {
+  line-height: 1.7;
+  margin: 16px 0;
+}
+.signup-panel .form-help {
+  font-size: 12px;
+  color: #4a5467;
+}
+.signup-panel .form-help a {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+  .sponsor-card {
+    padding: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .signup-panel {
+    padding: 16px 8px;
+  }
+  .signup-panel > * {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-panel > .button {
+    width: calc(100% - 16px);
+  }
+}
+
+.signup-fields {
+  padding-left: 20px;
+  line-height: 1.8;
+  margin: 24px 0;
+  color: #4a5467;
+}
+.signup-fields li {
+  margin-bottom: 12px;
+}

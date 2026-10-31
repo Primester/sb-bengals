@@ -8,7 +8,7 @@ import { Arrow } from "./Icon";
 const links = [
   { href: "/#program", label: "The program" },
   { href: "/safety/", label: "Player safety" },
-  { href: "/#vision", label: "Our vision" },
+  { href: "/sponsors/", label: "Sponsors" },
   { href: "/#families", label: "For families" },
 ];
 export function Header() {
@@ -18,7 +18,7 @@ export function Header() {
     <>
       <div className="announcement">
         <span>
-          <span className="status-dot" /> Santa Barbara youth tackle football
+          <span className="status-dot" /> Taking inquiries for the 2027 season
         </span>
         <Link href="/#home-field">
           Our home field: San Marcos High School <Arrow diagonal />
@@ -71,11 +71,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                aria-current={
-                  path === "/safety/" && link.href === "/safety/"
-                    ? "page"
-                    : undefined
-                }
+                aria-current={path === link.href ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {link.label}

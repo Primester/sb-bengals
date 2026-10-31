@@ -26,6 +26,7 @@ export function Footer() {
           <p className="footer-label">Find your team</p>
           <Link href="/#program">The program</Link>
           <Link href="/safety/">Player safety</Link>
+          <Link href="/sponsors/">Become a sponsor</Link>
           <Link href="/#vision">Our vision</Link>
           <Link href="/#join">Get involved</Link>
         </div>
@@ -48,7 +49,7 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Santa Barbara Bengals</span>
-        <span>Youth tackle football. Built for our community.</span>
+        <span>A 501(c)(3) nonprofit. Built for our community.</span>
         <Link href="/privacy/">Privacy &amp; your information</Link>
       </div>
     </footer>
