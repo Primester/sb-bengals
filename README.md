@@ -29,7 +29,15 @@ Pull requests run tests, TypeScript, formatting, a production build, and exporte
 
 ## Family interest
 
-The form prepares an email to info@sbbengals.com. Visitors review and send the message from their own email app, or copy it into an email. The site does not save a lead database, send messages automatically, or complete player registration. No API key, payment service, password or account login is required.
+We are taking inquiries for the 2027 season. The linked Google Form saves submitted inquiries to Google Forms and a linked, access-restricted Google Sheet owned by the league administrator. Staff manage response access outside the public repository. Public response summaries are disabled; no response-file links or submitted data belong in this repository.
+
+Fields: parent/guardian or adult contact name, validated email, optional phone, playing/coaching/volunteering interests, player date of birth for player inquiries, and adult confirmation/contact permission. A submitted inquiry is not completed registration or a reserved roster spot. Privacy details are published at `/privacy/`.
+
+The signup button opens the public Google Form in a new tab. The public form is configured in `lib/interest-form.ts`. Google handles submission and displays its saved confirmation. The static site does not process or store form answers itself, and does not collect payments.
+
+## Sponsors and nonprofit
+
+The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed by the league owner. Sponsor inquiries go to info@sbbengals.com. The 501(c)(3) statement was confirmed by the league owner. No tax ID from a reference organization is used; nonprofit documentation is available by contacting the league.
 
 ## Content and assets
 

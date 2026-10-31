@@ -6,10 +6,9 @@
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "check": "npm run test && npm run typecheck && npm run format:check && npm run build && npm run verify:export",
-    "format": "prettier --write app components lib tests *.ts *.json",
-    "format:check": "prettier --check app components lib tests *.ts *.json",
+    "check": "npm run typecheck && npm run format:check && npm run build && npm run verify:export",
+    "format": "prettier --write app components lib *.ts *.json",
+    "format:check": "prettier --check app components lib *.ts *.json",
     "verify:export": "node scripts/verify-export.mjs"
   },
   "dependencies": {

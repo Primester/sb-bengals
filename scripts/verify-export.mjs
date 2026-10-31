@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 const root=resolve('out');
-const pages=['index.html','safety/index.html','privacy/index.html','404.html'];
+const pages=['index.html','safety/index.html','privacy/index.html','sponsors/index.html','404.html'];
 let count=0;
 const base=(process.env.NEXT_PUBLIC_BASE_PATH??'').replace(/\/$/,'');
 for(const page of pages){
