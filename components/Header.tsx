@@ -38,7 +38,7 @@ export function Header() {
             onClick={() => setOpen(false)}
           >
             <Image
-              src={assetPath("/brand/wordmark.webp")}
+              src={assetPath("/brand/wordmark-v1.2.webp")}
               width={1983}
               height={793}
               priority

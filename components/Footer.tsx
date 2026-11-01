@@ -10,7 +10,7 @@ export function Footer() {
         <div className="footer-brand">
           <Link href="/" aria-label="Santa Barbara Bengals home">
             <Image
-              src={assetPath("/brand/wordmark.webp")}
+              src={assetPath("/brand/wordmark-v1.2.webp")}
               alt="Santa Barbara Bengals"
               width={1983}
               height={793}
