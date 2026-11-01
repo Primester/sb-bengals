@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: absoluteAssetUrl("/brand/wordmark.png"),
+        url: absoluteAssetUrl("/brand/wordmark-v1.2.png"),
         width: 1983,
         height: 793,
         alt: "Santa Barbara Bengals",
