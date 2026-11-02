@@ -127,6 +127,9 @@ export default function Sponsors() {
             Integrity Always. Community Forever.
           </p>
           <p>
+            <strong>Employer Identification Number (EIN): 43-2243612</strong>
+          </p>
+          <p>
             Need nonprofit documentation for your sponsorship records? Contact{" "}
             <a href="mailto:info@sbbengals.com?subject=Bengals%20nonprofit%20documentation">
               info@sbbengals.com

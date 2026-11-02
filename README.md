@@ -37,7 +37,7 @@ The signup button opens the public Google Form in a new tab. The public form is 
 
 ## Sponsors and nonprofit
 
-The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed by the league owner. Sponsor inquiries go to info@sbbengals.com. The 501(c)(3) statement was confirmed by the league owner. No tax ID from a reference organization is used; nonprofit documentation is available by contacting the league.
+The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed by the league owner. Sponsor inquiries go to info@sbbengals.com. The 501(c)(3) statement was confirmed by the league owner. EIN 43-2243612 was supplied by Brett on November 2, 2026 and is displayed in the nonprofit section. Nonprofit documentation is available by contacting the league.
 
 ## Content and assets
 
