@@ -48,3 +48,7 @@ Program dates, eligibility, fees, credentials and any school partnerships should
 ## Preview
 
 ![Desktop website preview](previews/desktop.jpg)
+
+## Film room route
+
+`/filmroom/` is an unbranded, full-window embed of the separately hosted public Film Room. It is intentionally absent from team navigation and does not use the team's page layout or branding. The independent host handles video, comments and diagrams; this static wrapper only preserves the requested domain path and validated play-link hashes.
