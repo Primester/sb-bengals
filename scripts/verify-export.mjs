@@ -21,3 +21,9 @@ for(const page of pages){
 }
 if(!readFileSync(join(root,'index.html'),'utf8').includes('San Marcos High School'))throw new Error('Home field missing');
 console.log(`Verified ${pages.length} exported pages and ${count} local link targets.`);
+
+const filmRoom=readFileSync(join(root,'filmroom/index.html'),'utf8');
+if(!filmRoom.includes('https://eleven-u-film-room.vernon-compa-5167.chatgpt.site/')||!filmRoom.includes('<iframe'))throw new Error('Film room embed is missing');
+if(/Bengals|sb-mark|wordmark/i.test(filmRoom))throw new Error('Film room wrapper must be unbranded');
+if(readFileSync(join(root,'index.html'),'utf8').includes('href="/filmroom'))throw new Error('Film room must not appear in main-site navigation');
+console.log('Verified unbranded /filmroom wrapper and absence from team navigation.');
