@@ -43,6 +43,8 @@ The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed
 
 The website uses the Santa Barbara Bengals clean full-name wordmark, SB mark, royal blue, black and white, Anton headings and a Helvetica/Arial body stack. Anton is included under the SIL Open Font License in `public/brand/Anton-OFL.txt`. The helmet is an illustration, not a photo of a real player or facility. No third-party team photos or logos were copied.
 
+The SB monogram uses a cleaned, padded transparent master (`public/brand/sb-mark-master.png`). Square 512 px exports preserve its proportions and keep transparent space around the complete artwork. The website and favicon use `sb-mark-v1.3.png` to refresh cached artwork; `sb-mark.png` contains the same corrected export for existing links. The restoration is raster artwork, not a vector production master.
+
 Program dates, eligibility, fees, credentials and any school partnerships should be updated only with confirmed information. High school choice is a development vision, not an enrollment or athletic eligibility guarantee.
 
 ## Preview

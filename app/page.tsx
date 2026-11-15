@@ -214,10 +214,10 @@ export default function Home() {
             <FieldLines className="field-drawing" />
             <div className="vision-mark">
               <Image
-                src={assetPath("/brand/sb-mark.png")}
+                src={assetPath("/brand/sb-mark-v1.3.png")}
                 alt=""
-                width={320}
-                height={320}
+                width={512}
+                height={512}
               />
             </div>
             <div className="four-corners" aria-hidden="true">
