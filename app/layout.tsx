@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  icons: { icon: absoluteAssetUrl("/brand/sb-mark.png") },
+  icons: { icon: absoluteAssetUrl("/brand/sb-mark-v1.3.png") },
 };
 export default function RootLayout({
   children,
