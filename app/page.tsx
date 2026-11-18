@@ -69,8 +69,8 @@ export default function Home() {
             <a href="#join" className="button">
               2027 season interest <Arrow />
             </a>
-            <a href="#contact" className="hero-safety">
-              Contact us <Arrow diagonal />
+            <a href="#contact" className="button button-outline">
+              Contact us <Arrow />
             </a>
             <Link href="/safety/" className="hero-safety">
               <Shield />

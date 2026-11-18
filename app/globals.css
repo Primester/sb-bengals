@@ -140,6 +140,14 @@ p {
   background: #e8edff;
   border-color: #e8edff;
 }
+.button-outline {
+  background: transparent;
+  border-color: #566075;
+}
+.button-outline:hover {
+  background: #1a2438;
+  border-color: #9bb1ff;
+}
 .button-small {
   min-height: 44px;
   padding: 13px 19px;
@@ -2375,5 +2383,4 @@ details[open] .faq-plus:after {
 
 .signup-panel button:disabled {
   cursor: default;
-  opacity: 0.65;
 }
