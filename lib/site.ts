@@ -9,5 +9,8 @@ export const site = {
 } as const;
 export const resources = {
   cdc: "https://www.cdc.gov/heads-up/response/index.html",
-  usaFootball: "https://www.usafootball.com/athletes-parents/parent-resources",
+  usaFootball: "https://usafootball.com/athletes-parents/parent-resources",
+  practice: "https://usafootball.com/coaches-organizations/practice-guidelines",
+  contact: "https://usafootball.com/coaches-organizations/levels-of-contact",
+  heat: "https://www.cdc.gov/heat-health/risk-factors/heat-and-athletes.html",
 } as const;

@@ -1,6 +1,6 @@
 # Santa Barbara Bengals
 
-Youth tackle football in Santa Barbara. A responsive website emphasizing player well-being, local player development, the four-public-high-school representation vision, and the home field at San Marcos High School.
+Youth tackle football in Santa Barbara. A responsive website emphasizing player well-being, local player development across Santa Barbara, Goleta, and Carpinteria, and the home field at San Marcos High School.
 
 ## Website
 
@@ -25,7 +25,9 @@ npm run check
 
 The output is in `out/`. `NEXT_PUBLIC_BASE_PATH` configures the GitHub Pages repository path. `NEXT_PUBLIC_SITE_URL` sets the public metadata URL. `NEXT_PUBLIC_INDEXING_ENABLED=true` enables indexing for the public build. The workflow supplies these values and enables indexing for the live domain; none is a secret.
 
-Pull requests run tests, TypeScript, formatting, a production build, and exported-link validation. Pushes to `main` run the same checks and deploy to GitHub Pages only after they pass.
+Pull requests run TypeScript, formatting, a static build, exported-link validation, and browser checks at phone and desktop widths. Download the `bengals-review` artifact from the pull request’s Actions run to view the screenshots or serve the extracted `out` directory with `python3 -m http.server 4173 --bind 127.0.0.1 --directory out`. The review build disables indexing and the live inquiry form. Use `NEXT_PUBLIC_REVIEW_BUILD=true npm run check` to produce the same form behavior locally.
+
+GitHub Pages publishes the live website only from `main` after its build checks pass.
 
 ## Family interest
 

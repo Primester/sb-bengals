@@ -16,7 +16,8 @@ jobs:
       NEXT_TELEMETRY_DISABLED: '1'
       NEXT_PUBLIC_BASE_PATH: ''
       NEXT_PUBLIC_SITE_URL: https://sbbengals.com/
-      NEXT_PUBLIC_INDEXING_ENABLED: 'true'
+      NEXT_PUBLIC_INDEXING_ENABLED: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && 'true' || 'false' }}
+      NEXT_PUBLIC_REVIEW_BUILD: ${{ github.event_name == 'pull_request' && 'true' || 'false' }}
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7.1.0
@@ -25,6 +26,21 @@ jobs:
           cache: npm
       - run: npm ci --no-fund
       - run: npm run check
+      - name: Verify phone and desktop layouts
+        if: github.event_name == 'pull_request'
+        run: |
+          npm install --no-save --package-lock=false playwright@1.62.1
+          npx playwright install --with-deps chromium
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory out &
+          node scripts/verify-review-browser.mjs
+      - name: Upload review build and screenshots
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: bengals-review
+          path: |
+            out/
+            review-screenshots/
       - name: Upload website
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5.0.0
