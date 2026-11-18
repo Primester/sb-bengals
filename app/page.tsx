@@ -63,7 +63,9 @@ export default function Home() {
             We serve families in Santa Barbara, Goleta, and Carpinteria. Through
             fundamentals-driven football, quality coaching, and a focus on
             player safety, we build character, grit, discipline, teamwork, and a
-            lifelong love of the game.
+            lifelong love of the game. Whether your athlete plans to attend San
+            Marcos High, Santa Barbara High, Dos Pueblos High, Carpinteria High,
+            or another school, they’re welcome here.
           </p>
           <div className="button-row">
             <a href="#join" className="button">
