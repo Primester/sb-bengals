@@ -26,8 +26,8 @@ const faqs = [
     "Fees, equipment inclusions, and any financial assistance options will be shared when finalized. We want families to understand the full commitment before registering. Email info@sbbengals.com with questions.",
   ],
   [
-    "Can I coach, volunteer, or help as a school representative?",
-    "We’d love to hear from you. We’re building a community around players, families, coaches, and local high school representatives. Select coaching or volunteering in the interest signup form, or email us directly.",
+    "Can I coach or volunteer?",
+    "We’d love to hear from you. We welcome people who want to help young athletes learn and enjoy football. Select coaching or volunteering in the interest signup form, or email us directly.",
   ],
 ];
 export default function Home() {
@@ -50,19 +50,27 @@ export default function Home() {
             <span className="mini-rule" /> 2027 season inquiries are open
           </p>
           <h1 id="hero-title">
-            BIG DREAMS.
+            One Community.
             <br />
-            STRONG
+            Every Athlete.
             <br />
-            <span>FOUNDATIONS.</span>
+            <span>Every Path.</span>
           </h1>
           <p className="hero-intro">
-            A place to learn the game. A team to grow with.
-            <br className="desktop-break" /> A community behind every player.
+            <strong className="hero-mission">
+              Developing Better Athletes. Building Better People.
+            </strong>{" "}
+            We serve families in Santa Barbara, Goleta, and Carpinteria. Through
+            fundamentals-driven football, quality coaching, and a focus on
+            player safety, we build character, grit, discipline, teamwork, and a
+            lifelong love of the game.
           </p>
           <div className="button-row">
             <a href="#join" className="button">
-              Find your place on the team <Arrow />
+              2027 season interest <Arrow />
+            </a>
+            <a href="#contact" className="hero-safety">
+              Contact us <Arrow diagonal />
             </a>
             <Link href="/safety/" className="hero-safety">
               <Shield />
@@ -87,11 +95,9 @@ export default function Home() {
       </section>
       <div className="belief-strip">
         <div className="container">
-          <span>KIDS FIRST.</span>
+          <span>CHARACTER FIRST.</span>
           <i aria-hidden="true" />
-          <span>INTEGRITY ALWAYS.</span>
-          <i aria-hidden="true" />
-          <span>COMMUNITY FOREVER.</span>
+          <span>FOOTBALL FOREVER.</span>
         </div>
       </div>
       <section
@@ -109,9 +115,8 @@ export default function Home() {
                 EVEN BETTER <span className="blue-text">FOUNDATIONS.</span>
               </h2>
               <p className="section-intro">
-                The Bengals are being built for Santa Barbara kids and the
-                people who believe in them. Our focus is simple: develop the
-                player, support the person, and make the team a place to belong.
+                We teach football fundamentals, build confidence through
+                constructive coaching, and give every player a place to belong.
               </p>
             </div>
           </div>
@@ -142,9 +147,9 @@ export default function Home() {
               </p>
             </article>
           </div>
-          <a className="text-link" href="#join">
-            Let’s talk about your player <Arrow />
-          </a>
+          <Link className="text-link" href="/programs/">
+            Explore youth tackle football <Arrow />
+          </Link>
         </div>
       </section>
       <section className="safety-feature" aria-labelledby="safety-title">
@@ -233,37 +238,25 @@ export default function Home() {
             </p>
           </div>
           <div className="vision-copy">
-            <p className="eyebrow">03 / Built for Santa Barbara</p>
+            <p className="eyebrow">Community football</p>
             <h2 id="vision-title">
-              YOUR CITY.
+              One Community.
               <br />
-              YOUR TEAM.
-              <br />
-              <span className="blue-text">YOUR NEXT CHAPTER.</span>
+              <span className="blue-text">A Stronger Football Future.</span>
             </h2>
             <p className="section-intro">
-              Our vision is to bring representatives from all four local public
-              high school football programs into the Bengals community.
+              We welcome families from Santa Barbara, Goleta, and Carpinteria
+              and support each family’s choice of high school.
             </p>
             <p>
-              We want to connect local experience with young talent, and prepare
-              players to arrive at the high school of their choosing with
-              stronger fundamentals, confidence, and a team-first mindset.
+              A strong youth football foundation can help more kids participate,
+              build better fundamentals, and bring local coaches together. We
+              want athletes to carry their skills, confidence, and teamwork into
+              any high school they choose.
             </p>
-            <p className="vision-emphasis">
-              One youth program. A shared investment in Santa Barbara’s next
-              generation.
-            </p>
-            <a
-              href="mailto:info@sbbengals.com?subject=High%20school%20representative%20interest"
-              className="text-link"
-            >
-              Help build that connection <Arrow diagonal />
-            </a>
-            <p className="small-note">
-              We’re building these connections with local high school programs.
-              School enrollment and athletic eligibility remain separate.
-            </p>
+            <Link href="/about/" className="text-link">
+              Read our mission and vision <Arrow />
+            </Link>
           </div>
         </div>
       </section>
@@ -342,7 +335,7 @@ export default function Home() {
                 Get player updates <Arrow />
               </span>
             </a>
-            <a href="#join">
+            <Link href="/coaches/">
               <span className="eyebrow">For coaches &amp; volunteers</span>
               <h3>Be the difference.</h3>
               <p>
@@ -350,9 +343,9 @@ export default function Home() {
                 experience for our young athletes.
               </p>
               <span className="involve-link">
-                Raise your hand <Arrow />
+                Explore coaching and volunteering <Arrow />
               </span>
-            </a>
+            </Link>
             <Link href="/sponsors/">
               <span className="eyebrow">For local businesses</span>
               <h3>Back the Bengals.</h3>
@@ -433,8 +426,9 @@ export default function Home() {
                 <span>03</span>Get program information and next steps.
               </p>
             </div>
-            <p className="direct-email">
-              Prefer a direct conversation?
+            <p className="direct-email" id="contact">
+              Email us about registration, coaching, volunteering, sponsorship,
+              or donations.
               <br />
               <a href={`mailto:${site.email}`}>
                 {site.email} <Arrow diagonal />

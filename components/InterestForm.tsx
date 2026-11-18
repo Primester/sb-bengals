@@ -2,6 +2,22 @@ import Link from "next/link";
 import { Arrow } from "./Icon";
 import { interestFormUrl } from "@/lib/interest-form";
 export function InterestForm() {
+  if (process.env.NEXT_PUBLIC_REVIEW_BUILD === "true") {
+    return (
+      <div className="signup-panel">
+        <p className="eyebrow">2027 season interest signup</p>
+        <h3>Player, coach, and volunteer inquiries</h3>
+        <p>The live inquiry form is disabled in this review build.</p>
+        <button className="button button-full" type="button" disabled>
+          Start your 2027 inquiry <Arrow diagonal />
+        </button>
+        <p className="form-help">
+          <Link href="/privacy/">How we handle your information</Link>
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="signup-panel">
       <p className="eyebrow">2027 season interest signup</p>

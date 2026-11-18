@@ -11,17 +11,17 @@ const priorities = [
   [
     "Coach preparation",
     "Prepared adults set the tone.",
-    "Our program priorities include coach education, screening, and age-appropriate instruction. Families should know who is coaching their child and which credentials have been completed.",
+    "We prioritize coach education, screening, and consistent enforcement of safety expectations. USA Football offers coach education in age-appropriate practice, contact progression, and player well-being.",
   ],
   [
     "Equipment readiness",
     "Fit matters. So does condition.",
-    "Proper fitting, equipment condition, and required reconditioning are part of planning for participation. We’ll share equipment requirements and what families need before the season.",
+    "Proper fit, routine equipment checks, maintenance, and required reconditioning are part of preparing to play. We’ll share equipment requirements and what families need before the season.",
   ],
   [
     "Thoughtful progression",
     "Learn the skill. Build from there.",
-    "Our development vision emphasizes football fundamentals and progressive instruction. Contact limits, practice expectations, and age-specific rules should be clear before participation.",
+    "Teach blocking and tackling footwork, leverage, and body position without contact first. Players learn to recognize and avoid unnecessary contact and keep the head out of contact. Advance to controlled practice only when appropriate for the athlete’s age, readiness, and applicable rules.",
   ],
   [
     "A culture of speaking up",
@@ -29,9 +29,9 @@ const priorities = [
     "We want players to report discomfort or symptoms without pressure to keep playing. Families should have a clear way to raise a concern with the program.",
   ],
   [
-    "Response planning",
-    "Know the plan before it is needed.",
-    "Emergency procedures, medical arrangements, heat planning, and family communication are part of season preparation. Ask us about the confirmed plan for a specific activity.",
+    "Heat and workload",
+    "Plan for the conditions.",
+    "Keep workloads age-appropriate, build practice intensity and equipment use gradually, and plan water and rest breaks. Adjust activity for heat, humidity, and air quality. Ask us about emergency procedures and the plan for a specific activity.",
   ],
   [
     "Family partnership",
@@ -108,7 +108,9 @@ export default function Safety() {
             <p>
               Tackle football is a contact sport, and injury risk cannot be
               eliminated. Families deserve clear information and a culture that
-              takes concerns seriously.
+              takes concerns seriously. Progressive instruction can help young
+              athletes develop technique, body awareness, and decision-making as
+              they grow into the next level of football.
             </p>
           </div>
           <div className="resource-feature">
@@ -148,6 +150,42 @@ export default function Safety() {
           </div>
           <div className="resource-links">
             <a
+              href={resources.practice}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <span className="eyebrow">USA Football</span>
+                <h3>Youth practice guidelines</h3>
+                <p>
+                  Age-appropriate practices, workload, and heat acclimatization.
+                </p>
+              </div>
+              <Arrow diagonal />
+            </a>
+            <a
+              href={resources.contact}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <span className="eyebrow">USA Football</span>
+                <h3>Levels of contact</h3>
+                <p>
+                  How coaches can progress from no contact to controlled drills.
+                </p>
+              </div>
+              <Arrow diagonal />
+            </a>
+            <a href={resources.heat} target="_blank" rel="noopener noreferrer">
+              <div>
+                <span className="eyebrow">CDC</span>
+                <h3>Heat and athletes</h3>
+                <p>Hydration, rest, and preparing for hot-weather activity.</p>
+              </div>
+              <Arrow diagonal />
+            </a>
+            <a
               href={resources.usaFootball}
               target="_blank"
               rel="noopener noreferrer"
@@ -174,10 +212,6 @@ export default function Safety() {
               <Arrow diagonal />
             </a>
           </div>
-          <p className="small-note">
-            These are independent educational resources. Linking to them does
-            not imply endorsement, affiliation, or certification of the Bengals.
-          </p>
         </div>
       </section>
       <section className="simple-cta">

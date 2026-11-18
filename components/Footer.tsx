@@ -17,17 +17,18 @@ export function Footer() {
             />
           </Link>
           <p>
-            Kids First. Integrity Always.
+            Character First.
             <br />
-            Community Forever.
+            Football Forever.
           </p>
         </div>
         <div>
           <p className="footer-label">Find your team</p>
-          <Link href="/#program">The program</Link>
+          <Link href="/programs/">The program</Link>
+          <Link href="/coaches/">Coaches and volunteers</Link>
           <Link href="/safety/">Player safety</Link>
           <Link href="/sponsors/">Become a sponsor</Link>
-          <Link href="/#vision">Our vision</Link>
+          <Link href="/about/">Our mission and vision</Link>
           <Link href="/#join">Get involved</Link>
         </div>
         <div>

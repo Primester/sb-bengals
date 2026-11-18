@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Santa Barbara Bengals",
   },
   description:
-    "Your city. Your team. Your next chapter. Get to know Santa Barbara Bengals youth tackle football: player-first development, a safety-focused vision, and a home field at San Marcos High School.",
+    "Santa Barbara Bengals youth tackle football serves families in Santa Barbara, Goleta, and Carpinteria through age-appropriate instruction, quality coaching, and a commitment to player safety.",
   robots: {
     index: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
     follow: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Santa Barbara Bengals | Youth Tackle Football",
     description:
-      "Build confidence. Learn the game. Find your team in Santa Barbara.",
+      "One Community. Every Athlete. Every Path. Youth tackle football in Santa Barbara, Goleta, and Carpinteria.",
     type: "website",
     locale: "en_US",
     images: [

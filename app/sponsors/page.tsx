@@ -57,8 +57,9 @@ export default function Sponsors() {
             <span>LASTING IMPACT.</span>
           </h1>
           <p className="page-hero-intro">
-            A team takes a whole community. Help Santa Barbara kids learn the
-            game, build confidence, and find a place to belong.
+            A team takes a whole community. Help kids across Santa Barbara,
+            Goleta, and Carpinteria learn the game, build confidence, and find a
+            place to belong.
           </p>
           <a
             className="button"
@@ -123,8 +124,9 @@ export default function Sponsors() {
           <h2 id="nonprofit-title">A NONPROFIT. A SHARED PURPOSE.</h2>
           <p>
             The Santa Barbara Bengals are a 501(c)(3) nonprofit supporting youth
-            football in Santa Barbara. Our commitment is simple: Kids First.
-            Integrity Always. Community Forever.
+            football in Santa Barbara, Goleta, and Carpinteria. Our goal is to
+            make youth football accessible to more families through community
+            sponsorships, volunteer support, and responsible stewardship.
           </p>
           <p>
             <strong>Employer Identification Number (EIN): 43-2243612</strong>
@@ -136,11 +138,17 @@ export default function Sponsors() {
             </a>
             .
           </p>
+          <h3>Helping More Families Participate</h3>
+          <p>
+            We aim to offer financial assistance or scholarships when approved
+            funding permits and equipment assistance when gear is available.
+            Families can email us to ask about current options.
+          </p>
           <h3>Have another way to help?</h3>
           <p>
-            We welcome conversations about donated goods, services, and
-            volunteer time. Tell us what you have in mind and we’ll find the
-            right next step together.
+            We welcome inquiries about donations, donated equipment or services,
+            volunteering, and ways local organizations can work with us. Email
+            the Bengals to discuss how you can help.
           </p>
           <Link className="text-link" href="/#join">
             Explore playing, coaching, and volunteering <Arrow />

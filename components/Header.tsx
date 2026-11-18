@@ -6,7 +6,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Arrow } from "./Icon";
 const links = [
-  { href: "/#program", label: "The program" },
+  { href: "/about/", label: "About" },
+  { href: "/programs/", label: "The program" },
   { href: "/safety/", label: "Player safety" },
   { href: "/sponsors/", label: "Sponsors" },
   { href: "/#families", label: "For families" },
@@ -71,7 +72,11 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                aria-current={path === link.href ? "page" : undefined}
+                aria-current={
+                  path === link.href.replace(/\/$/, "") || path === link.href
+                    ? "page"
+                    : undefined
+                }
                 onClick={() => setOpen(false)}
               >
                 {link.label}

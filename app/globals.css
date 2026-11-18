@@ -2317,3 +2317,63 @@ details[open] .faq-plus:after {
 .signup-fields li {
   margin-bottom: 12px;
 }
+
+.hero-mission {
+  display: block;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(36px, 6vw, 84px);
+}
+
+.editorial-copy {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.editorial-copy > h2,
+#values-title {
+  font-size: clamp(32px, 4vw, 54px);
+}
+
+.editorial-copy > p,
+.editorial-copy > ul,
+.editorial-copy > ol {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 64ch;
+}
+
+.editorial-copy > ul,
+.editorial-copy > ol {
+  padding-inline-start: 1.25em;
+}
+
+.editorial-copy li + li {
+  margin-top: 0.35em;
+}
+
+.editorial-cards h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 11.5vw, 70px);
+  }
+}
+
+.signup-panel button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}

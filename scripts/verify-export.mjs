@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 const root=resolve('out');
-const pages=['index.html','safety/index.html','privacy/index.html','sponsors/index.html','404.html'];
+const pages=['index.html','about/index.html','programs/index.html','coaches/index.html','safety/index.html','privacy/index.html','sponsors/index.html','404.html'];
 let count=0;
 const base=(process.env.NEXT_PUBLIC_BASE_PATH??'').replace(/\/$/,'');
 for(const page of pages){
@@ -19,7 +19,13 @@ for(const page of pages){
  }
  if(process.env.NEXT_PUBLIC_INDEXING_ENABLED!=='true'&&!html.includes('noindex'))throw new Error(`${page} should remain noindex before public launch`);
 }
-if(!readFileSync(join(root,'index.html'),'utf8').includes('San Marcos High School'))throw new Error('Home field missing');
+const home = readFileSync(join(root, 'index.html'), 'utf8');
+if (!home.includes('San Marcos High School')) throw new Error('Home field missing');
+const hasLiveInquiryLink = /href="https:\/\/docs\.google\.com\/forms\//.test(home);
+const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === 'true';
+if (hasLiveInquiryLink === reviewBuild) {
+  throw new Error('The live inquiry form should only be linked outside review builds');
+}
 console.log(`Verified ${pages.length} exported pages and ${count} local link targets.`);
 
 const filmRoom=readFileSync(join(root,'filmroom/index.html'),'utf8');
