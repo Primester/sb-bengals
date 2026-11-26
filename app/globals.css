@@ -2305,27 +2305,15 @@ details[open] .faq-plus:after {
   margin: 16px 0;
 }
 .registration-cta {
-  max-width: 21rem;
-  gap: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 0 #00269c;
-  font-size: 16px;
+  gap: 12px;
+  padding-inline: 16px;
+  border-radius: 6px;
+  font-size: 15px;
 }
-a.registration-cta:hover {
-  background: #002fca;
-  border-color: #002fca;
-}
-a.registration-cta:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #00269c;
-}
-.registration-cta strong {
-  display: block;
-  margin-top: 4px;
-  font-size: 19px;
-}
-.registration-cta .arrow {
-  flex: none;
+.registration-cta-price {
+  padding-left: 12px;
+  border-left: 1px solid #ffffff80;
+  white-space: nowrap;
 }
 .signup-panel .form-help {
   font-size: 12px;

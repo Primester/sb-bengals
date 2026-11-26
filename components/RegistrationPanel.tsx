@@ -1,16 +1,12 @@
 import Link from "next/link";
 import { registrationFee, registrationUrl } from "@/lib/registration";
-import { Arrow } from "./Icon";
 
 export function RegistrationPanel() {
   const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === "true";
   const signupLabel = (
     <>
-      <span>
-        Register for the 2027 season
-        <strong>Just {registrationFee}</strong>
-      </span>
-      <Arrow diagonal />
+      <span>Register for 2027</span>
+      <span className="registration-cta-price">Just {registrationFee}</span>
     </>
   );
 
@@ -22,17 +18,13 @@ export function RegistrationPanel() {
         registration. Sign in or create an account to register your athlete.
       </p>
       {reviewBuild ? (
-        <button
-          className="button button-full registration-cta"
-          type="button"
-          disabled
-        >
+        <button className="button registration-cta" type="button" disabled>
           {signupLabel}
         </button>
       ) : (
         <a
           aria-describedby="registration-link-note"
-          className="button button-full registration-cta"
+          className="button registration-cta"
           href={registrationUrl}
           target="_blank"
           rel="noopener noreferrer"

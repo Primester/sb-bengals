@@ -58,7 +58,7 @@ try {
     assert.equal(
       await page
         .getByRole("button", {
-          name: /Register for the 2027 season.*Just \$495/,
+          name: /Register for 2027.*Just \$495/,
         })
         .isDisabled(),
       true,
