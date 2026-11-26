@@ -47,7 +47,8 @@ try {
       })
       .waitFor();
     await page
-      .locator(".hero").getByRole("link", { name: "2027 registration", exact: true })
+      .locator(".hero")
+      .getByRole("link", { name: "2027 registration is open", exact: true })
       .click();
     await page.waitForURL("**/#join");
     assert.equal(
@@ -60,6 +61,14 @@ try {
     await page.locator("#join .join-grid").screenshot({
       path: `review-screenshots/${name}-registration.png`,
     });
+    if (name === "desktop") {
+      await page.goto(new URL("/programs/", origin).href);
+      await page
+        .locator(".announcement")
+        .getByRole("link", { name: "2027 registration is open", exact: true })
+        .click();
+      await page.waitForURL(`${origin}/#join`);
+    }
     await page.getByRole("link", { name: "Contact us", exact: true }).click();
     await page.waitForURL("**/#contact");
     assert.equal(

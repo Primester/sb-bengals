@@ -209,15 +209,15 @@ p {
   line-height: 1.5;
   letter-spacing: 0.7px;
 }
-.announcement > span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 .announcement a {
   display: flex;
   align-items: center;
   gap: 9px;
+}
+.registration-status {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .announcement .arrow {
   width: 12px;
@@ -1387,9 +1387,6 @@ details[open] .faq-plus:after {
   .announcement {
     padding: 7px 24px;
   }
-  .announcement > span {
-    font-size: 9px;
-  }
   .announcement > a {
     font-size: 9px;
   }
@@ -1696,7 +1693,7 @@ details[open] .faq-plus:after {
     min-height: 30px;
     padding: 7px 15px;
   }
-  .announcement > span {
+  .announcement > .registration-status {
     display: none;
   }
   .announcement > a {

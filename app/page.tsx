@@ -47,9 +47,10 @@ export default function Home() {
         </div>
         <div className="hero-shade" />
         <div className="container hero-content">
-          <p className="eyebrow">
-            <span className="mini-rule" /> 2027 registration is open
-          </p>
+          <a className="eyebrow registration-status" href="#join">
+            <span className="mini-rule" aria-hidden="true" /> 2027 registration
+            is open
+          </a>
           <h1 id="hero-title">
             One Community.
             <br />

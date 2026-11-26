@@ -18,9 +18,10 @@ export function Header() {
   return (
     <>
       <div className="announcement">
-        <span>
-          <span className="status-dot" /> 2027 registration is open
-        </span>
+        <Link className="registration-status" href="/#join">
+          <span className="status-dot" aria-hidden="true" /> 2027 registration
+          is open
+        </Link>
         <Link href="/#home-field">
           Our home field: San Marcos High School <Arrow diagonal />
         </Link>
