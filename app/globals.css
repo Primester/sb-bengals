@@ -209,15 +209,15 @@ p {
   line-height: 1.5;
   letter-spacing: 0.7px;
 }
-.announcement > span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
 .announcement a {
   display: flex;
   align-items: center;
   gap: 9px;
+}
+.registration-status {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .announcement .arrow {
   width: 12px;
@@ -854,6 +854,9 @@ details[open] .faq-plus:after {
   line-height: 1.85;
   max-width: 410px;
 }
+.join-copy > .button {
+  margin-top: 24px;
+}
 .join-points {
   margin-top: 32px;
 }
@@ -1387,9 +1390,6 @@ details[open] .faq-plus:after {
   .announcement {
     padding: 7px 24px;
   }
-  .announcement > span {
-    font-size: 9px;
-  }
   .announcement > a {
     font-size: 9px;
   }
@@ -1696,7 +1696,7 @@ details[open] .faq-plus:after {
     min-height: 30px;
     padding: 7px 15px;
   }
-  .announcement > span {
+  .announcement > .registration-status {
     display: none;
   }
   .announcement > a {
@@ -2274,12 +2274,31 @@ details[open] .faq-plus:after {
 .sponsor-nonprofit {
   border-top: 1px solid #d8deea;
 }
+.registration-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  margin-top: 22px;
+  font-size: 18px;
+}
+.registration-price strong {
+  color: #91a9ff;
+  font: 400 clamp(44px, 6vw, 72px) / 1 var(--heading);
+}
+.registration-season {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
 .signup-panel {
   min-width: 0;
   background: white;
   border-radius: 8px;
   padding: 24px;
   color: #161e30;
+}
+.signup-panel h2 {
+  font-size: clamp(28px, 3vw, 36px);
 }
 .signup-panel > p {
   line-height: 1.7;

@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 const root=resolve('out');
-const pages=['index.html','about/index.html','programs/index.html','coaches/index.html','safety/index.html','privacy/index.html','sponsors/index.html','404.html'];
+const pages=['index.html','about/index.html','programs/index.html','coaches/index.html','safety/index.html','privacy/index.html','registration/index.html','sponsors/index.html','404.html'];
 let count=0;
 const base=(process.env.NEXT_PUBLIC_BASE_PATH??'').replace(/\/$/,'');
 for(const page of pages){
@@ -21,10 +21,21 @@ for(const page of pages){
 }
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 if (!home.includes('San Marcos High School')) throw new Error('Home field missing');
-const hasLiveInquiryLink = /href="https:\/\/docs\.google\.com\/forms\//.test(home);
+const registration = readFileSync(join(root, 'registration/index.html'), 'utf8');
+const registrationLinks = [...registration.matchAll(/href="(https:\/\/app\.playmetrics\.com\/signup\?[^"]+)"/g)]
+  .map(([, href]) => new URL(href));
 const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === 'true';
-if (hasLiveInquiryLink === reviewBuild) {
-  throw new Error('The live inquiry form should only be linked outside review builds');
+if (reviewBuild ? registrationLinks.length !== 0 :
+    registrationLinks.length !== 1 || !registrationLinks[0].searchParams.get('clubToken')) {
+  throw new Error('The PlayMetrics club signup link should only appear outside review builds');
+}
+if (!registration.includes('<strong>$495</strong>') ||
+    !registration.includes('two or more teams in each division') ||
+    registration.includes('https://docs.google.com/forms/')) {
+  throw new Error('The registration page should show the confirmed fee and team goals and use PlayMetrics');
+}
+if (!home.includes(`href="${base}/registration/"`) || home.includes('https://app.playmetrics.com/signup')) {
+  throw new Error('The homepage should direct families to the registration page');
 }
 console.log(`Verified ${pages.length} exported pages and ${count} local link targets.`);
 

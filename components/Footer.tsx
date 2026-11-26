@@ -29,7 +29,7 @@ export function Footer() {
           <Link href="/safety/">Player safety</Link>
           <Link href="/sponsors/">Become a sponsor</Link>
           <Link href="/about/">Our mission and vision</Link>
-          <Link href="/#join">Get involved</Link>
+          <Link href="/registration/">2027 registration</Link>
         </div>
         <div>
           <p className="footer-label">Let’s talk football</p>

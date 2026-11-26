@@ -18,9 +18,10 @@ export function Header() {
   return (
     <>
       <div className="announcement">
-        <span>
-          <span className="status-dot" /> Taking inquiries for the 2027 season
-        </span>
+        <Link className="registration-status" href="/registration/">
+          <span className="status-dot" aria-hidden="true" /> 2027 registration
+          is open
+        </Link>
         <Link href="/#home-field">
           Our home field: San Marcos High School <Arrow diagonal />
         </Link>
@@ -84,10 +85,10 @@ export function Header() {
             ))}
             <Link
               className="button button-small"
-              href="/#join"
+              href="/registration/"
               onClick={() => setOpen(false)}
             >
-              Join the Bengals <Arrow />
+              2027 registration <Arrow />
             </Link>
           </nav>
         </div>

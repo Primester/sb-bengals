@@ -10,6 +10,8 @@ const routes = [
   "/coaches/",
   "/safety/",
   "/sponsors/",
+  "/privacy/",
+  "/registration/",
 ];
 await mkdir("review-screenshots", { recursive: true });
 
@@ -46,20 +48,43 @@ try {
       })
       .waitFor();
     await page
-      .getByRole("link", { name: "2027 season interest", exact: true })
+      .locator(".hero")
+      .getByRole("link", { name: "2027 registration is open", exact: true })
       .click();
-    await page.waitForURL("**/#join");
+    await page.waitForURL(`${origin}/registration/`);
+    await page
+      .getByRole("heading", { name: "2027 Registration", level: 1 })
+      .waitFor();
     assert.equal(
       await page
-        .getByRole("button", { name: "Start your 2027 inquiry" })
+        .getByRole("button", { name: "Register on PlayMetrics" })
         .isDisabled(),
       true,
     );
+    await page
+      .locator(".registration-price")
+      .getByText("$495", { exact: true })
+      .waitFor();
+    await page.getByText(/20% off the second child/).waitFor();
+    await page.getByText(/25% off each additional child/).waitFor();
+    await page.getByText(/two or more teams in each division/).waitFor();
+    await page.locator("main").screenshot({
+      path: `review-screenshots/${name}-registration-details.png`,
+    });
+    if (name === "desktop") {
+      await page.goto(new URL("/programs/", origin).href);
+      await page
+        .locator(".announcement")
+        .getByRole("link", { name: "2027 registration is open", exact: true })
+        .click();
+      await page.waitForURL(`${origin}/registration/`);
+    }
+    await page.goto(origin);
     await page.getByRole("link", { name: "Contact us", exact: true }).click();
     await page.waitForURL("**/#contact");
     assert.equal(
       await page.locator("#contact a").getAttribute("href"),
-      "mailto:info@sbbengals.com",
+      "mailto:Vincent@sbbengals.com",
     );
 
     const menu = page.getByRole("button", { name: "Open navigation" });

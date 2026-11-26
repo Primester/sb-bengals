@@ -25,21 +25,21 @@ npm run check
 
 The output is in `out/`. `NEXT_PUBLIC_BASE_PATH` configures the GitHub Pages repository path. `NEXT_PUBLIC_SITE_URL` sets the public metadata URL. `NEXT_PUBLIC_INDEXING_ENABLED=true` enables indexing for the public build. The workflow supplies these values and enables indexing for the live domain; none is a secret.
 
-Pull requests run TypeScript, formatting, a static build, exported-link validation, and browser checks at phone and desktop widths. Download the `bengals-review` artifact from the pull request’s Actions run to view the screenshots or serve the extracted `out` directory with `python3 -m http.server 4173 --bind 127.0.0.1 --directory out`. The review build disables indexing and the live inquiry form. Use `NEXT_PUBLIC_REVIEW_BUILD=true npm run check` to produce the same form behavior locally.
+Pull requests run TypeScript, formatting, a static build, exported-link validation, and browser checks at phone and desktop widths. Download the `bengals-review` artifact from the pull request’s Actions run to view the screenshots or serve the extracted `out` directory with `python3 -m http.server 4173 --bind 127.0.0.1 --directory out`. The review build disables indexing and the live registration button. Use `NEXT_PUBLIC_REVIEW_BUILD=true npm run check` to produce the same registration behavior locally.
 
 GitHub Pages publishes the live website only from `main` after its build checks pass.
 
-## Family interest
+## 2027 registration
 
-We are taking inquiries for the 2027 season. The linked Google Form saves submitted inquiries to Google Forms and a linked, access-restricted Google Sheet owned by the league administrator. Staff manage response access outside the public repository. Public response summaries are disabled; no response-file links or submitted data belong in this repository.
-
-Fields: parent/guardian or adult contact name, validated email, optional phone, playing/coaching/volunteering interests, player date of birth for player inquiries, and adult confirmation/contact permission. A submitted inquiry is not completed registration or a reserved roster spot. Privacy details are published at `/privacy/`.
-
-The signup button opens the public Google Form in a new tab. The public form is configured in `lib/interest-form.ts`. Google handles submission and displays its saved confirmation. The static site does not process or store form answers itself, and does not collect payments.
+The 2027 fee is $495 with no early bird pricing or late registration fees. The
+signup button at `/registration/` uses the Bengals club link in `lib/registration.ts`.
+Families enter athlete information and complete registration through
+PlayMetrics. The website’s privacy page also describes earlier inquiries
+submitted through Google Forms.
 
 ## Sponsors and nonprofit
 
-The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed by the league owner. Sponsor inquiries go to info@sbbengals.com. The 501(c)(3) statement was confirmed by the league owner. EIN 43-2243612 was supplied by Brett on November 2, 2026 and is displayed in the nonprofit section. Nonprofit documentation is available by contacting the league.
+The sponsor page lists Bronze $500, Silver $1,000, and Gold $1,500, as confirmed by the league owner. Sponsor inquiries go to Vincent@sbbengals.com. The 501(c)(3) statement was confirmed by the league owner. EIN 43-2243612 was supplied by Brett on November 2, 2026 and is displayed in the nonprofit section. Nonprofit documentation is available by contacting the league.
 
 ## Content and assets
 

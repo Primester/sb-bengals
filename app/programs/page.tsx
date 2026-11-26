@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { registrationFee } from "@/lib/registration";
 import Link from "next/link";
 import { Arrow } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Youth Football Programs",
   description:
-    "Explore Bengals youth tackle football, player development, and 2027 season inquiries.",
+    "Explore Bengals youth tackle football, player development, and 2027 registration.",
 };
 
 export default function Programs() {
@@ -71,18 +72,16 @@ export default function Programs() {
           <article className="editorial-copy" id="registration">
             <h2>2027 Registration Information</h2>
             <p>
-              We’re taking inquiries for the 2027 season. The youth tackle
-              program is intended for ages 6–14, subject to confirmed league
-              divisions and eligibility rules. We’ll share age divisions,
-              registration steps, dates, fees, and equipment requirements once
-              confirmed.
+              Registration for the 2027 season is open through PlayMetrics. The
+              fee is {registrationFee} with no early bird pricing and no late
+              registration fees.
             </p>
             <p>
-              Families can share their interest now. Roster spots and
-              registration will be handled separately when enrollment opens.
+              The youth tackle program is intended for ages 6–14, subject to
+              confirmed league divisions and eligibility rules.
             </p>
-            <Link href="/#join" className="button">
-              2027 season interest <Arrow />
+            <Link href="/registration/" className="button">
+              See registration details <Arrow />
             </Link>
           </article>
         </div>

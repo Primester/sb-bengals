@@ -60,14 +60,10 @@ export default function Coaches() {
           <article className="editorial-copy">
             <h2>Coach or Volunteer</h2>
             <p>
-              Interested in helping? Select coaching or volunteering on the same
-              2027 interest form used by families, or email us to ask about
-              opportunities.
+              Interested in helping? Email us to ask about coaching or
+              volunteering opportunities for the 2027 season.
             </p>
             <div className="button-row">
-              <Link href="/#join" className="button">
-                Coaching and volunteer interest <Arrow />
-              </Link>
               <a
                 href={`mailto:${site.email}?subject=Coaching%20or%20volunteering`}
                 className="text-link"
