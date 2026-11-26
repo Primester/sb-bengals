@@ -2274,12 +2274,18 @@ details[open] .faq-plus:after {
 .sponsor-nonprofit {
   border-top: 1px solid #d8deea;
 }
+.registration-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px clamp(24px, 4vw, 56px);
+  margin-top: 22px;
+}
 .registration-price {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   column-gap: 12px;
-  margin-top: 22px;
   font-size: 18px;
 }
 .registration-price strong {
@@ -2303,6 +2309,23 @@ details[open] .faq-plus:after {
 .signup-panel > p {
   line-height: 1.7;
   margin: 16px 0;
+}
+.registration-cta {
+  gap: 8px;
+  padding-inline: 12px;
+  background: #ffb547;
+  color: var(--ink);
+  border-color: var(--ink);
+  border-radius: 6px;
+  font-size: clamp(14px, 4vw, 15px);
+}
+a.registration-cta:hover {
+  background: #ffd088;
+}
+.registration-cta-price {
+  padding-left: 8px;
+  border-left: 1px solid #10121766;
+  white-space: nowrap;
 }
 .signup-panel .form-help {
   font-size: 12px;

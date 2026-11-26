@@ -22,12 +22,19 @@ for(const page of pages){
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 if (!home.includes('San Marcos High School')) throw new Error('Home field missing');
 const registration = readFileSync(join(root, 'registration/index.html'), 'utf8');
-const registrationLinks = [...registration.matchAll(/href="(https:\/\/app\.playmetrics\.com\/signup\?[^"]+)"/g)]
-  .map(([, href]) => new URL(href));
+const signupLinks = [...registration.matchAll(/<a [^>]*href="(https:\/\/app\.playmetrics\.com\/signup\?[^"]+)"[^>]*>/g)];
 const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === 'true';
-if (reviewBuild ? registrationLinks.length !== 0 :
-    registrationLinks.length !== 1 || !registrationLinks[0].searchParams.get('clubToken')) {
-  throw new Error('The PlayMetrics club signup link should only appear outside review builds');
+if (signupLinks.length !== (reviewBuild ? 0 : 2)) {
+  throw new Error('The registration page should have two PlayMetrics signup links outside review builds');
+}
+if (!reviewBuild) {
+  const destination = signupLinks[0][1];
+  const hasClub = new URL(destination).searchParams.get('clubToken');
+  const sameDestinationInNewTabs = signupLinks.every(([link, href]) =>
+    href === destination && link.includes('target="_blank"') && link.includes('rel="noopener noreferrer"'));
+  if (!hasClub || !sameDestinationInNewTabs) {
+    throw new Error('Both signup links should open the same PlayMetrics club page securely in new tabs');
+  }
 }
 if (!registration.includes('<strong>$495</strong>') ||
     !registration.includes('two or more teams in each division') ||

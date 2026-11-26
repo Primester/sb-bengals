@@ -57,7 +57,16 @@ try {
       .waitFor();
     assert.equal(
       await page
-        .getByRole("button", { name: "Register on PlayMetrics" })
+        .getByRole("button", {
+          name: /Click here to register.*Just \$495/,
+        })
+        .isDisabled(),
+      true,
+    );
+    assert.equal(
+      await page
+        .locator(".registration-actions")
+        .getByRole("button", { name: "Click here to register", exact: true })
         .isDisabled(),
       true,
     );
