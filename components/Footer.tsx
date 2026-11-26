@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { Arrow } from "./Icon";
+import { AnalyticsPreferences } from "./AnalyticsPreferences";
+import { analyticsMeasurementId } from "@/lib/analytics";
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -52,6 +54,9 @@ export function Footer() {
         <span>© {new Date().getFullYear()} Santa Barbara Bengals</span>
         <span>A 501(c)(3) nonprofit. Built for our community.</span>
         <Link href="/privacy/">Privacy &amp; your information</Link>
+        {analyticsMeasurementId && (
+          <AnalyticsPreferences measurementId={analyticsMeasurementId} />
+        )}
       </div>
     </footer>
   );
