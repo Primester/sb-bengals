@@ -2310,7 +2310,7 @@ details[open] .faq-plus:after {
   background: var(--ink);
   border-color: var(--ink);
   border-radius: 6px;
-  font-size: 15px;
+  font-size: clamp(14px, 4vw, 15px);
 }
 a.registration-cta:hover {
   background: #25334e;
