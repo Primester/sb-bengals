@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Arrow } from "@/components/Icon";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sponsor the Bengals",
@@ -63,7 +64,7 @@ export default function Sponsors() {
           </p>
           <a
             className="button"
-            href="mailto:info@sbbengals.com?subject=2027%20Bengals%20sponsorship"
+            href={`mailto:${site.email}?subject=2027%20Bengals%20sponsorship`}
           >
             Become a sponsor <Arrow diagonal />
           </a>
@@ -100,7 +101,7 @@ export default function Sponsors() {
                 </ul>
                 <a
                   className="button button-full"
-                  href={`mailto:info@sbbengals.com?subject=${encodeURIComponent(`2027 ${tier.name} sponsorship — ${tier.amount}`)}`}
+                  href={`mailto:${site.email}?subject=${encodeURIComponent(`2027 ${tier.name} sponsorship — ${tier.amount}`)}`}
                 >
                   Choose {tier.name} <Arrow diagonal />
                 </a>
@@ -109,7 +110,7 @@ export default function Sponsors() {
           </div>
           <p className="sponsor-note">
             Email your business name, preferred level, and contact information
-            to <a href="mailto:info@sbbengals.com">info@sbbengals.com</a>. We’ll
+            to <a href={`mailto:${site.email}`}>{site.email}</a>. We’ll
             coordinate artwork, recognition details, and payment instructions
             with you directly.
           </p>
@@ -133,8 +134,10 @@ export default function Sponsors() {
           </p>
           <p>
             Need nonprofit documentation for your sponsorship records? Contact{" "}
-            <a href="mailto:info@sbbengals.com?subject=Bengals%20nonprofit%20documentation">
-              info@sbbengals.com
+            <a
+              href={`mailto:${site.email}?subject=Bengals%20nonprofit%20documentation`}
+            >
+              {site.email}
             </a>
             .
           </p>

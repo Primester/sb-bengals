@@ -1,6 +1,6 @@
 export const site = {
   name: "Santa Barbara Bengals",
-  email: "info@sbbengals.com",
+  email: "Vincent@sbbengals.com",
   instagram: "https://www.instagram.com/sb_bengals/",
   field: "San Marcos High School",
   fieldAddress: "4750 Hollister Avenue, Santa Barbara, CA 93110",

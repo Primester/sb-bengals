@@ -23,11 +23,11 @@ const faqs = [
   ],
   [
     "How much does registration cost?",
-    `2027 registration costs ${registrationFee} with no early bird pricing and no late registration fees. Email info@sbbengals.com with questions about equipment or other registration details.`,
+    `2027 registration costs ${registrationFee} with no early bird pricing and no late registration fees. Sibling discounts are available. Email ${site.email} with questions about equipment or other registration details.`,
   ],
   [
     "Can I coach or volunteer?",
-    "We’d love to hear from you. We welcome people who want to help young athletes learn and enjoy football. Email info@sbbengals.com to ask about coaching or volunteering.",
+    `We’d love to hear from you. We welcome people who want to help young athletes learn and enjoy football. Email ${site.email} to ask about coaching or volunteering.`,
   ],
 ];
 export default function Home() {

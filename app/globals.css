@@ -2274,6 +2274,18 @@ details[open] .faq-plus:after {
 .sponsor-nonprofit {
   border-top: 1px solid #d8deea;
 }
+.registration-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  margin-top: 22px;
+  font-size: 18px;
+}
+.registration-price strong {
+  color: #91a9ff;
+  font: 400 clamp(44px, 6vw, 72px) / 1 var(--heading);
+}
 .registration-season {
   background: var(--white);
   border-top: 1px solid var(--line);

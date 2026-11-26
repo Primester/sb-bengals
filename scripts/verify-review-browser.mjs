@@ -61,7 +61,12 @@ try {
         .isDisabled(),
       true,
     );
-    await page.getByText(/registration at \$495/).waitFor();
+    await page
+      .locator(".registration-price")
+      .getByText("$495", { exact: true })
+      .waitFor();
+    await page.getByText(/20% off the second child/).waitFor();
+    await page.getByText(/25% off each additional child/).waitFor();
     await page.getByText(/two or more teams in each division/).waitFor();
     await page.locator("main").screenshot({
       path: `review-screenshots/${name}-registration-details.png`,
@@ -79,7 +84,7 @@ try {
     await page.waitForURL("**/#contact");
     assert.equal(
       await page.locator("#contact a").getAttribute("href"),
-      "mailto:info@sbbengals.com",
+      "mailto:Vincent@sbbengals.com",
     );
 
     const menu = page.getByRole("button", { name: "Open navigation" });

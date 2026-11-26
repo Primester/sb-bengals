@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { site } from "@/lib/site";
 export const metadata: Metadata = { title: "Privacy & Your Information" };
 export default function Privacy() {
   return (
@@ -66,8 +67,8 @@ export default function Privacy() {
           <p>
             To correct your information, request removal of your inquiry, or
             stop future follow-up, email{" "}
-            <a href="mailto:info@sbbengals.com">info@sbbengals.com</a>. Please
-            do not include a player’s birth date in your email subject line.
+            <a href={`mailto:${site.email}`}>{site.email}</a>. Please do not
+            include a player’s birth date in your email subject line.
           </p>
           <h2>Website hosting and links</h2>
           <p>

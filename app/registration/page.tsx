@@ -21,6 +21,9 @@ export default function Registration() {
           <h1>
             2027 <span>Registration</span>
           </h1>
+          <p className="registration-price">
+            <strong>{registrationFee}</strong> standard registration
+          </p>
           <p className="page-hero-intro">
             The Santa Barbara Bengals’ 2027 youth tackle football season is open
             for registration. We welcome new and returning players from Santa
@@ -32,16 +35,30 @@ export default function Registration() {
       <section className="section section-paper" aria-labelledby="fee-title">
         <div className="container editorial-grid">
           <div className="editorial-copy">
-            <h2 id="fee-title">One Registration Price</h2>
+            <h2 id="fee-title">Registration Pricing</h2>
             <p>
               We are keeping registration at <strong>{registrationFee}</strong>{" "}
               with no early bird pricing and no late registration fees.
             </p>
+            <h3>Sibling Discounts</h3>
+            <ul>
+              <li>
+                <strong>20% off</strong> the second child’s registration.
+              </li>
+              <li>
+                <strong>25% off</strong> each additional child’s registration,
+                starting with the third.
+              </li>
+            </ul>
+            <p>
+              PlayMetrics also applies these discounts when you register
+              additional children later.
+            </p>
             <p>
               Our goal is to keep registration as affordable as possible for all
-              families. By maintaining one consistent price, we hope to give
-              every family the opportunity to register at the lowest cost we can
-              offer.
+              families. By keeping the base price the same throughout
+              registration, we hope to give every family the opportunity to
+              register at the lowest cost we can offer.
             </p>
             <p>
               We will reevaluate our registration structure each year to

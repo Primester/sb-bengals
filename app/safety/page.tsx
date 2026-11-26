@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Arrow, Shield } from "@/components/Icon";
-import { resources } from "@/lib/site";
+import { resources, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Player Safety",
   description:
@@ -228,7 +228,7 @@ export default function Safety() {
           </div>
           <a
             className="button button-white"
-            href="mailto:info@sbbengals.com?subject=Question%20about%20Bengals%20player%20safety"
+            href={`mailto:${site.email}?subject=Question%20about%20Bengals%20player%20safety`}
           >
             Ask a safety question <Arrow diagonal />
           </a>
