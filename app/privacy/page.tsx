@@ -82,10 +82,11 @@ export default function Privacy() {
               <h2>Optional website analytics</h2>
               <p>
                 If you allow analytics, Google Analytics uses cookies and
-                collects information such as which pages you visit, how you
-                arrived, and general information about your device and browser.
-                We use it to understand website traffic and improve the site.
-                Player registration takes place separately on PlayMetrics.
+                collects information such as which pages you visit, which links
+                you follow to other sites, how you arrived, and general
+                information about your device and browser. We use it to
+                understand website traffic and improve the site. Player
+                registration takes place separately on PlayMetrics.
               </p>
               <p>
                 Use Analytics preferences in the footer to change your choice at
