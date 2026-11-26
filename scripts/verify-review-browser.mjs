@@ -57,7 +57,9 @@ try {
       .waitFor();
     assert.equal(
       await page
-        .getByRole("button", { name: "Register on PlayMetrics" })
+        .getByRole("button", {
+          name: /Register for the 2027 season.*Just \$495/,
+        })
         .isDisabled(),
       true,
     );

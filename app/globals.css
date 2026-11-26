@@ -2304,6 +2304,18 @@ details[open] .faq-plus:after {
   line-height: 1.7;
   margin: 16px 0;
 }
+.registration-cta {
+  gap: 16px;
+  font-size: 15px;
+}
+.registration-cta strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 19px;
+}
+.registration-cta .arrow {
+  flex: none;
+}
 .signup-panel .form-help {
   font-size: 12px;
   color: #4a5467;

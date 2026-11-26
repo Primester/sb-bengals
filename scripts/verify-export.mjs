@@ -29,6 +29,12 @@ if (reviewBuild ? registrationLinks.length !== 0 :
     registrationLinks.length !== 1 || !registrationLinks[0].searchParams.get('clubToken')) {
   throw new Error('The PlayMetrics club signup link should only appear outside review builds');
 }
+if (!reviewBuild) {
+  const signupLink = registration.match(/<a [^>]*href="https:\/\/app\.playmetrics\.com\/signup\?[^"]+"[^>]*>/)?.[0];
+  if (!signupLink?.includes('target="_blank"') || !signupLink.includes('rel="noopener noreferrer"')) {
+    throw new Error('The PlayMetrics signup link should open securely in a new tab');
+  }
+}
 if (!registration.includes('<strong>$495</strong>') ||
     !registration.includes('two or more teams in each division') ||
     registration.includes('https://docs.google.com/forms/')) {
