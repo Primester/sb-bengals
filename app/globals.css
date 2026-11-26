@@ -2426,3 +2426,37 @@ a.registration-cta:hover {
 .signup-panel button:disabled {
   cursor: default;
 }
+
+.analytics-settings {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.analytics-preferences {
+  position: fixed;
+  z-index: 45;
+  inset-inline-end: 16px;
+  inset-block-end: 16px;
+  width: min(400px, calc(100vw - 32px));
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  box-shadow: 0 4px 20px #10121729;
+}
+
+.analytics-preferences-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.analytics-preferences-actions .button-white {
+  border-color: var(--line);
+}

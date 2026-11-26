@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { analyticsMeasurementId } from "@/lib/analytics";
 export const metadata: Metadata = { title: "Privacy & Your Information" };
 export default function Privacy() {
   return (
@@ -72,11 +73,31 @@ export default function Privacy() {
           </p>
           <h2>Website hosting and links</h2>
           <p>
-            The website is hosted on GitHub Pages and includes no added
-            advertising pixels or analytics scripts. Hosting providers may
-            process standard connection information such as IP addresses and
-            access logs. External sites have their own privacy practices.
+            The website is hosted on GitHub Pages. Hosting providers may process
+            standard connection information such as IP addresses and access
+            logs. External sites have their own privacy practices.
           </p>
+          {analyticsMeasurementId && (
+            <>
+              <h2>Optional website analytics</h2>
+              <p>
+                If you allow analytics, Google Analytics uses cookies and
+                collects information such as which pages you visit, which links
+                you follow to other sites, how you arrived, and general
+                information about your device and browser. We use it to
+                understand website traffic and improve the site. Player
+                registration takes place separately on PlayMetrics.
+              </p>
+              <p>
+                Use Analytics preferences in the footer to change your choice at
+                any time. Learn more about{" "}
+                <a href="https://policies.google.com/technologies/partner-sites">
+                  how Google uses information from sites that use its services
+                </a>
+                .
+              </p>
+            </>
+          )}
           <Link className="text-link" href="/registration/">
             Back to registration
           </Link>

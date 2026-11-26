@@ -29,6 +29,15 @@ Pull requests run TypeScript, formatting, a static build, exported-link validati
 
 GitHub Pages publishes the live website only from `main` after its build checks pass.
 
+## Google Analytics
+
+Set the GitHub Actions repository variable `GA_MEASUREMENT_ID` to the Bengals
+GA4 web stream’s public `G-…` measurement ID. The production build reads it
+as `NEXT_PUBLIC_GA_MEASUREMENT_ID`. Draft builds omit Google Analytics and
+the analytics preference control. When the production tag is configured, it
+loads after a visitor chooses Allow analytics. Use the Realtime report to
+verify a consented visit and view pages from more than one site route.
+
 ## 2027 registration
 
 The 2027 fee is $495 with no early bird pricing or late registration fees. The
