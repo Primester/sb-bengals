@@ -11,6 +11,7 @@ const routes = [
   "/safety/",
   "/sponsors/",
   "/privacy/",
+  "/registration/",
 ];
 await mkdir("review-screenshots", { recursive: true });
 
@@ -50,16 +51,20 @@ try {
       .locator(".hero")
       .getByRole("link", { name: "2027 registration is open", exact: true })
       .click();
-    await page.waitForURL("**/#join");
+    await page.waitForURL(`${origin}/registration/`);
+    await page
+      .getByRole("heading", { name: "2027 Registration", level: 1 })
+      .waitFor();
     assert.equal(
       await page
         .getByRole("button", { name: "Register on PlayMetrics" })
         .isDisabled(),
       true,
     );
-    await page.locator("#join").getByText(/registration at \$495/).waitFor();
-    await page.locator("#join .join-grid").screenshot({
-      path: `review-screenshots/${name}-registration.png`,
+    await page.getByText(/registration at \$495/).waitFor();
+    await page.getByText(/two or more teams in each division/).waitFor();
+    await page.locator("main").screenshot({
+      path: `review-screenshots/${name}-registration-details.png`,
     });
     if (name === "desktop") {
       await page.goto(new URL("/programs/", origin).href);
@@ -67,8 +72,9 @@ try {
         .locator(".announcement")
         .getByRole("link", { name: "2027 registration is open", exact: true })
         .click();
-      await page.waitForURL(`${origin}/#join`);
+      await page.waitForURL(`${origin}/registration/`);
     }
+    await page.goto(origin);
     await page.getByRole("link", { name: "Contact us", exact: true }).click();
     await page.waitForURL("**/#contact");
     assert.equal(

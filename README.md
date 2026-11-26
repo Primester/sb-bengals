@@ -32,7 +32,7 @@ GitHub Pages publishes the live website only from `main` after its build checks 
 ## 2027 registration
 
 The 2027 fee is $495 with no early bird pricing or late registration fees. The
-homepage signup button uses the Bengals club link in `lib/registration.ts`.
+signup button at `/registration/` uses the Bengals club link in `lib/registration.ts`.
 Families enter athlete information and complete registration through
 PlayMetrics. The website’s privacy page also describes earlier inquiries
 submitted through Google Forms.

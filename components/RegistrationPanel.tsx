@@ -7,7 +7,7 @@ export function RegistrationPanel() {
 
   return (
     <div className="signup-panel">
-      <h3>Register through PlayMetrics</h3>
+      <h2>Register through PlayMetrics</h2>
       <p>
         We use PlayMetrics, which acquired SportsEngine, for Bengals
         registration. Sign in or create an account to manage your athlete’s

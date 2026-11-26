@@ -2,7 +2,6 @@ import { assetPath } from "@/lib/paths";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, Shield, FieldLines } from "@/components/Icon";
-import { RegistrationPanel } from "@/components/RegistrationPanel";
 import { registrationFee } from "@/lib/registration";
 import { site } from "@/lib/site";
 const faqs = [
@@ -12,7 +11,7 @@ const faqs = [
   ],
   [
     "How do I sign up?",
-    "Choose Register on PlayMetrics below to sign in or create an account and register your player for the 2027 season.",
+    "Visit the 2027 registration page for details and to sign in or create an account in PlayMetrics to register your player.",
   ],
   [
     "Where is the Bengals’ home field?",
@@ -47,10 +46,10 @@ export default function Home() {
         </div>
         <div className="hero-shade" />
         <div className="container hero-content">
-          <a className="eyebrow registration-status" href="#join">
+          <Link className="eyebrow registration-status" href="/registration/">
             <span className="mini-rule" aria-hidden="true" /> 2027 registration
             is open
-          </a>
+          </Link>
           <h1 id="hero-title">
             One Community.
             <br />
@@ -70,9 +69,9 @@ export default function Home() {
             or another school, they’re welcome here.
           </p>
           <div className="button-row">
-            <a href="#join" className="button">
+            <Link href="/registration/" className="button">
               2027 registration <Arrow />
-            </a>
+            </Link>
             <a href="#contact" className="button button-outline">
               Contact us <Arrow />
             </a>
@@ -328,7 +327,7 @@ export default function Home() {
             </p>
           </div>
           <div className="involvement-grid">
-            <a href="#join">
+            <Link href="/registration/">
               <span className="eyebrow">For families</span>
               <h3>Find your team.</h3>
               <p>
@@ -338,7 +337,7 @@ export default function Home() {
               <span className="involve-link">
                 See registration details <Arrow />
               </span>
-            </a>
+            </Link>
             <Link href="/coaches/">
               <span className="eyebrow">For coaches &amp; volunteers</span>
               <h3>Be the difference.</h3>
@@ -412,21 +411,14 @@ export default function Home() {
               2027 <span>REGISTRATION.</span>
             </h2>
             <p>
-              We are keeping registration at {registrationFee} with no early
-              bird pricing and no late registration fees.
+              Registration is {registrationFee} for the 2027 season, with no
+              early bird pricing or late registration fees.
             </p>
-            <p>
-              Our goal is to keep registration as affordable as possible for all
-              families. By maintaining one consistent price, we hope to give
-              every family the opportunity to register at the lowest cost we can
-              offer.
-            </p>
-            <p>
-              We will reevaluate our registration structure each year to
-              determine what works best for our families and our program, always
-              keeping our priority in mind: making sure every player has the
-              opportunity to play.
-            </p>
+            <Link href="/registration/" className="button">
+              See registration details <Arrow />
+            </Link>
+          </div>
+          <div>
             <p className="direct-email" id="contact">
               Email us about registration, coaching, volunteering, sponsorship,
               or donations.
@@ -436,7 +428,6 @@ export default function Home() {
               </a>
             </p>
           </div>
-          <RegistrationPanel />
         </div>
       </section>
     </main>

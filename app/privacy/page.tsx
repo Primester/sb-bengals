@@ -76,7 +76,7 @@ export default function Privacy() {
             process standard connection information such as IP addresses and
             access logs. External sites have their own privacy practices.
           </p>
-          <Link className="text-link" href="/#join">
+          <Link className="text-link" href="/registration/">
             Back to registration
           </Link>
         </div>

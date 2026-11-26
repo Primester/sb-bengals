@@ -18,7 +18,7 @@ export function Header() {
   return (
     <>
       <div className="announcement">
-        <Link className="registration-status" href="/#join">
+        <Link className="registration-status" href="/registration/">
           <span className="status-dot" aria-hidden="true" /> 2027 registration
           is open
         </Link>
@@ -85,7 +85,7 @@ export function Header() {
             ))}
             <Link
               className="button button-small"
-              href="/#join"
+              href="/registration/"
               onClick={() => setOpen(false)}
             >
               2027 registration <Arrow />

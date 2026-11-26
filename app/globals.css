@@ -854,6 +854,9 @@ details[open] .faq-plus:after {
   line-height: 1.85;
   max-width: 410px;
 }
+.join-copy > .button {
+  margin-top: 24px;
+}
 .join-points {
   margin-top: 32px;
 }
@@ -2271,12 +2274,19 @@ details[open] .faq-plus:after {
 .sponsor-nonprofit {
   border-top: 1px solid #d8deea;
 }
+.registration-season {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
 .signup-panel {
   min-width: 0;
   background: white;
   border-radius: 8px;
   padding: 24px;
   color: #161e30;
+}
+.signup-panel h2 {
+  font-size: clamp(28px, 3vw, 36px);
 }
 .signup-panel > p {
   line-height: 1.7;

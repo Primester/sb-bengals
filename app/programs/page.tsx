@@ -80,7 +80,7 @@ export default function Programs() {
               The youth tackle program is intended for ages 6–14, subject to
               confirmed league divisions and eligibility rules.
             </p>
-            <Link href="/#join" className="button">
+            <Link href="/registration/" className="button">
               See registration details <Arrow />
             </Link>
           </article>
