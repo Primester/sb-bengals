@@ -2305,13 +2305,19 @@ details[open] .faq-plus:after {
   margin: 16px 0;
 }
 .registration-cta {
-  gap: 10px;
-  padding-inline: 14px;
+  gap: 8px;
+  padding-inline: 12px;
+  background: var(--ink);
+  border-color: var(--ink);
   border-radius: 6px;
   font-size: 15px;
 }
+a.registration-cta:hover {
+  background: #25334e;
+  border-color: #25334e;
+}
 .registration-cta-price {
-  padding-left: 10px;
+  padding-left: 8px;
   border-left: 1px solid #ffffff80;
   white-space: nowrap;
 }

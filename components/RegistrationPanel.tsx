@@ -5,7 +5,7 @@ export function RegistrationPanel() {
   const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === "true";
   const signupLabel = (
     <>
-      <span>Register for 2027</span>
+      <span>Click here to register</span>
       <span className="registration-cta-price">Just {registrationFee}</span>
     </>
   );
