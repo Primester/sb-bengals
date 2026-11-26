@@ -19,7 +19,7 @@ export function Header() {
     <>
       <div className="announcement">
         <span>
-          <span className="status-dot" /> Taking inquiries for the 2027 season
+          <span className="status-dot" /> 2027 registration is open
         </span>
         <Link href="/#home-field">
           Our home field: San Marcos High School <Arrow diagonal />
@@ -87,7 +87,7 @@ export function Header() {
               href="/#join"
               onClick={() => setOpen(false)}
             >
-              Join the Bengals <Arrow />
+              2027 registration <Arrow />
             </Link>
           </nav>
         </div>

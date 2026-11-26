@@ -10,6 +10,7 @@ const routes = [
   "/coaches/",
   "/safety/",
   "/sponsors/",
+  "/privacy/",
 ];
 await mkdir("review-screenshots", { recursive: true });
 
@@ -46,15 +47,19 @@ try {
       })
       .waitFor();
     await page
-      .getByRole("link", { name: "2027 season interest", exact: true })
+      .locator(".hero").getByRole("link", { name: "2027 registration", exact: true })
       .click();
     await page.waitForURL("**/#join");
     assert.equal(
       await page
-        .getByRole("button", { name: "Start your 2027 inquiry" })
+        .getByRole("button", { name: "Register on PlayMetrics" })
         .isDisabled(),
       true,
     );
+    await page.locator("#join").getByText(/registration at \$495/).waitFor();
+    await page.locator("#join .join-grid").screenshot({
+      path: `review-screenshots/${name}-registration.png`,
+    });
     await page.getByRole("link", { name: "Contact us", exact: true }).click();
     await page.waitForURL("**/#contact");
     assert.equal(

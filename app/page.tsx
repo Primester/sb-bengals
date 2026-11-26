@@ -2,7 +2,8 @@ import { assetPath } from "@/lib/paths";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, Shield, FieldLines } from "@/components/Icon";
-import { InterestForm } from "@/components/InterestForm";
+import { RegistrationPanel } from "@/components/RegistrationPanel";
+import { registrationFee } from "@/lib/registration";
 import { site } from "@/lib/site";
 const faqs = [
   [
@@ -11,7 +12,7 @@ const faqs = [
   ],
   [
     "How do I sign up?",
-    "We are taking inquiries for the 2027 season. Start with the interest signup form below. We’ll share confirmed registration details, eligibility, dates, fees, and equipment information as they become available. Sending an inquiry does not reserve a roster spot or complete registration.",
+    "Choose Register on PlayMetrics below to sign in or create an account and register your player for the 2027 season.",
   ],
   [
     "Where is the Bengals’ home field?",
@@ -22,12 +23,12 @@ const faqs = [
     "No. Our vision is to help young athletes build skills and confidence for the high school path their family chooses. School enrollment, transfer rules, and athletic eligibility are separate processes determined by the relevant schools and governing bodies.",
   ],
   [
-    "What will registration cost, and what equipment is included?",
-    "Fees, equipment inclusions, and any financial assistance options will be shared when finalized. We want families to understand the full commitment before registering. Email info@sbbengals.com with questions.",
+    "How much does registration cost?",
+    `2027 registration costs ${registrationFee} with no early bird pricing and no late registration fees. Email info@sbbengals.com with questions about equipment or other registration details.`,
   ],
   [
     "Can I coach or volunteer?",
-    "We’d love to hear from you. We welcome people who want to help young athletes learn and enjoy football. Select coaching or volunteering in the interest signup form, or email us directly.",
+    "We’d love to hear from you. We welcome people who want to help young athletes learn and enjoy football. Email info@sbbengals.com to ask about coaching or volunteering.",
   ],
 ];
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
         <div className="hero-shade" />
         <div className="container hero-content">
           <p className="eyebrow">
-            <span className="mini-rule" /> 2027 season inquiries are open
+            <span className="mini-rule" /> 2027 registration is open
           </p>
           <h1 id="hero-title">
             One Community.
@@ -69,7 +70,7 @@ export default function Home() {
           </p>
           <div className="button-row">
             <a href="#join" className="button">
-              2027 season interest <Arrow />
+              2027 registration <Arrow />
             </a>
             <a href="#contact" className="button button-outline">
               Contact us <Arrow />
@@ -330,11 +331,11 @@ export default function Home() {
               <span className="eyebrow">For families</span>
               <h3>Find your team.</h3>
               <p>
-                Ask questions, meet the program, and hear about the next
-                opportunity to get on the field.
+                See the fee and learn how to register your athlete for the 2027
+                season.
               </p>
               <span className="involve-link">
-                Get player updates <Arrow />
+                See registration details <Arrow />
               </span>
             </a>
             <Link href="/coaches/">
@@ -406,28 +407,25 @@ export default function Home() {
       >
         <div className="container join-grid">
           <div className="join-copy">
-            <p className="eyebrow light-eyebrow">07 / Come be a Bengal</p>
             <h2 id="join-title">
-              THE FIRST STEP
-              <br />
-              IS <span>SHOWING UP.</span>
+              2027 <span>REGISTRATION.</span>
             </h2>
             <p>
-              We are taking inquiries for the 2027 season. Tell us a little
-              about your family, or your interest in coaching or volunteering.
-              Your submitted inquiry is saved so we can follow up.
+              We are keeping registration at {registrationFee} with no early
+              bird pricing and no late registration fees.
             </p>
-            <div className="join-points">
-              <p>
-                <span>01</span>Tell us how you’d like to get involved.
-              </p>
-              <p>
-                <span>02</span>Submit your inquiry to the Bengals.
-              </p>
-              <p>
-                <span>03</span>Get program information and next steps.
-              </p>
-            </div>
+            <p>
+              Our goal is to keep registration as affordable as possible for all
+              families. By maintaining one consistent price, we hope to give
+              every family the opportunity to register at the lowest cost we can
+              offer.
+            </p>
+            <p>
+              We will reevaluate our registration structure each year to
+              determine what works best for our families and our program, always
+              keeping our priority in mind: making sure every player has the
+              opportunity to play.
+            </p>
             <p className="direct-email" id="contact">
               Email us about registration, coaching, volunteering, sponsorship,
               or donations.
@@ -437,7 +435,7 @@ export default function Home() {
               </a>
             </p>
           </div>
-          <InterestForm />
+          <RegistrationPanel />
         </div>
       </section>
     </main>

@@ -21,10 +21,15 @@ for(const page of pages){
 }
 const home = readFileSync(join(root, 'index.html'), 'utf8');
 if (!home.includes('San Marcos High School')) throw new Error('Home field missing');
-const hasLiveInquiryLink = /href="https:\/\/docs\.google\.com\/forms\//.test(home);
+const registrationLinks = [...home.matchAll(/href="(https:\/\/app\.playmetrics\.com\/signup\?[^"]+)"/g)]
+  .map(([, href]) => new URL(href));
 const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === 'true';
-if (hasLiveInquiryLink === reviewBuild) {
-  throw new Error('The live inquiry form should only be linked outside review builds');
+if (reviewBuild ? registrationLinks.length !== 0 :
+    registrationLinks.length !== 1 || !registrationLinks[0].searchParams.get('clubToken')) {
+  throw new Error('The PlayMetrics club signup link should only appear outside review builds');
+}
+if (!home.replaceAll('<!-- -->', '').includes('registration at $495') || home.includes('https://docs.google.com/forms/')) {
+  throw new Error('The homepage should show the confirmed fee and use PlayMetrics for registration');
 }
 console.log(`Verified ${pages.length} exported pages and ${count} local link targets.`);
 

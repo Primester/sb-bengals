@@ -150,8 +150,8 @@ export default function Sponsors() {
             volunteering, and ways local organizations can work with us. Email
             the Bengals to discuss how you can help.
           </p>
-          <Link className="text-link" href="/#join">
-            Explore playing, coaching, and volunteering <Arrow />
+          <Link className="text-link" href="/#contact">
+            Contact the Bengals <Arrow />
           </Link>
         </div>
       </section>
