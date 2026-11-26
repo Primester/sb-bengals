@@ -1,15 +1,47 @@
 import Link from "next/link";
 import { registrationFee, registrationUrl } from "@/lib/registration";
+import { Arrow } from "./Icon";
 
-export function RegistrationPanel() {
-  const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === "true";
-  const signupLabel = (
+const reviewBuild = process.env.NEXT_PUBLIC_REVIEW_BUILD === "true";
+
+export function RegistrationButton({
+  showPrice = false,
+}: {
+  showPrice?: boolean;
+}) {
+  const label = (
     <>
       <span>Click here to register</span>
-      <span className="registration-cta-price">Just {registrationFee}</span>
+      {showPrice ? (
+        <span className="registration-cta-price">Just {registrationFee}</span>
+      ) : (
+        <Arrow diagonal />
+      )}
     </>
   );
 
+  if (reviewBuild) {
+    return (
+      <button className="button registration-cta" type="button" disabled>
+        {label}
+      </button>
+    );
+  }
+
+  return (
+    <a
+      aria-describedby="registration-link-note"
+      className="button registration-cta"
+      href={registrationUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {label}
+    </a>
+  );
+}
+
+export function RegistrationPanel() {
   return (
     <div className="signup-panel">
       <h2>2027 Bengals Registration</h2>
@@ -17,21 +49,7 @@ export function RegistrationPanel() {
         We use PlayMetrics, which acquired SportsEngine, for Bengals
         registration. Sign in or create an account to register your athlete.
       </p>
-      {reviewBuild ? (
-        <button className="button registration-cta" type="button" disabled>
-          {signupLabel}
-        </button>
-      ) : (
-        <a
-          aria-describedby="registration-link-note"
-          className="button registration-cta"
-          href={registrationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {signupLabel}
-        </a>
-      )}
+      <RegistrationButton showPrice />
       <p className="form-help" id="registration-link-note">
         {reviewBuild
           ? "Registration is disabled in this preview."

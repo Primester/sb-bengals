@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { RegistrationPanel } from "@/components/RegistrationPanel";
+import {
+  RegistrationButton,
+  RegistrationPanel,
+} from "@/components/RegistrationPanel";
 import { registrationFee } from "@/lib/registration";
 import { site } from "@/lib/site";
 
@@ -21,9 +24,12 @@ export default function Registration() {
           <h1>
             2027 <span>Registration</span>
           </h1>
-          <p className="registration-price">
-            <strong>{registrationFee}</strong> standard registration
-          </p>
+          <div className="registration-actions">
+            <p className="registration-price">
+              <strong>{registrationFee}</strong> standard registration
+            </p>
+            <RegistrationButton />
+          </div>
           <p className="page-hero-intro">
             The Santa Barbara Bengals’ 2027 youth tackle football season is open
             for registration. We welcome new and returning players from Santa

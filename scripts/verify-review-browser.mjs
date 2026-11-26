@@ -63,6 +63,13 @@ try {
         .isDisabled(),
       true,
     );
+    assert.equal(
+      await page
+        .locator(".registration-actions")
+        .getByRole("button", { name: "Click here to register", exact: true })
+        .isDisabled(),
+      true,
+    );
     await page
       .locator(".registration-price")
       .getByText("$495", { exact: true })
